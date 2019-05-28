@@ -1,0 +1,527 @@
+<h1>
+  Edit bathroom #<%= @bathroom.id %>
+</h1>
+
+<hr>
+
+<!-- Form bathroom start -->
+<form action="/update_bathroom/<%= @bathroom.id %>" method="post">
+<!-- Form bathroom end -->
+
+  <!-- Label and input for bathroom_type start -->
+  <div class="form-group">
+    <label for="bathroom_type">
+      Bathroom type
+    </label>
+
+    <!-- Input for bathroom_type start -->
+    <input type="text" id="bathroom_type" name="bathroom_type" class="form-control" value="<%= @bathroom.bathroom_type %>">
+    <!-- Input for bathroom_type end -->
+  </div>
+  <!-- Label and input for bathroom_type end -->
+
+  <!-- Label and input for outside_access start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="outside_access">
+    <!-- Input for outside_access start -->
+    <input id="outside_access" class="form-check-input" name="outside_access" type="checkbox" value="1" <%= "checked" if @bathroom.outside_access %>>
+    <!-- Input for outside_access end -->
+    <label for="outside_access" class="form-check-label">
+      Outside access
+    </label>
+  </div>
+
+  <!-- Label and input for building start -->
+  <div class="form-group">
+    <label for="building">
+      Building
+    </label>
+
+    <!-- Input for building start -->
+    <input type="text" id="building" name="building" class="form-control" value="<%= @bathroom.building %>">
+    <!-- Input for building end -->
+  </div>
+  <!-- Label and input for building end -->
+
+  <!-- Label and input for room_number start -->
+  <div class="form-group">
+    <label for="room_number">
+      Room number
+    </label>
+
+    <!-- Input for room_number start -->
+    <input type="text" id="room_number" name="room_number" class="form-control" value="<%= @bathroom.room_number %>">
+    <!-- Input for room_number end -->
+  </div>
+  <!-- Label and input for room_number end -->
+
+  <!-- Label and input for latitude start -->
+  <div class="form-group">
+    <label for="latitude">
+      Latitude
+    </label>
+
+    <!-- Input for latitude start -->
+    <input type="text" id="latitude" name="latitude" class="form-control" value="<%= @bathroom.latitude %>">
+    <!-- Input for latitude end -->
+  </div>
+  <!-- Label and input for latitude end -->
+
+  <!-- Label and input for longitude start -->
+  <div class="form-group">
+    <label for="longitude">
+      Longitude
+    </label>
+
+    <!-- Input for longitude start -->
+    <input type="text" id="longitude" name="longitude" class="form-control" value="<%= @bathroom.longitude %>">
+    <!-- Input for longitude end -->
+  </div>
+  <!-- Label and input for longitude end -->
+
+  <!-- Label and input for door_width start -->
+  <div class="form-group">
+    <label for="door_width">
+      Door width
+    </label>
+
+    <!-- Input for door_width start -->
+    <input type="text" id="door_width" name="door_width" class="form-control" value="<%= @bathroom.door_width %>">
+    <!-- Input for door_width end -->
+  </div>
+  <!-- Label and input for door_width end -->
+
+  <!-- Label and input for doorknob_type start -->
+  <div class="form-group">
+    <label for="doorknob_type">
+      Doorknob type
+    </label>
+
+    <!-- Input for doorknob_type start -->
+    <input type="text" id="doorknob_type" name="doorknob_type" class="form-control" value="<%= @bathroom.doorknob_type %>">
+    <!-- Input for doorknob_type end -->
+  </div>
+  <!-- Label and input for doorknob_type end -->
+
+  <!-- Label and input for auto_push_button start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="auto_push_button">
+    <!-- Input for auto_push_button start -->
+    <input id="auto_push_button" class="form-check-input" name="auto_push_button" type="checkbox" value="1" <%= "checked" if @bathroom.auto_push_button %>>
+    <!-- Input for auto_push_button end -->
+    <label for="auto_push_button" class="form-check-label">
+      Auto push button
+    </label>
+  </div>
+
+  <!-- Label and input for double_doors start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="double_doors">
+    <!-- Input for double_doors start -->
+    <input id="double_doors" class="form-check-input" name="double_doors" type="checkbox" value="1" <%= "checked" if @bathroom.double_doors %>>
+    <!-- Input for double_doors end -->
+    <label for="double_doors" class="form-check-label">
+      Double doors
+    </label>
+  </div>
+
+  <!-- Label and input for stall_door_width start -->
+  <div class="form-group">
+    <label for="stall_door_width">
+      Stall door width
+    </label>
+
+    <!-- Input for stall_door_width start -->
+    <input type="text" id="stall_door_width" name="stall_door_width" class="form-control" value="<%= @bathroom.stall_door_width %>">
+    <!-- Input for stall_door_width end -->
+  </div>
+  <!-- Label and input for stall_door_width end -->
+
+  <!-- Label and input for stall_doorknob_type start -->
+  <div class="form-group">
+    <label for="stall_doorknob_type">
+      Stall doorknob type
+    </label>
+
+    <!-- Input for stall_doorknob_type start -->
+    <input type="text" id="stall_doorknob_type" name="stall_doorknob_type" class="form-control" value="<%= @bathroom.stall_doorknob_type %>">
+    <!-- Input for stall_doorknob_type end -->
+  </div>
+  <!-- Label and input for stall_doorknob_type end -->
+
+  <!-- Label and input for stall_auto_close start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="stall_auto_close">
+    <!-- Input for stall_auto_close start -->
+    <input id="stall_auto_close" class="form-check-input" name="stall_auto_close" type="checkbox" value="1" <%= "checked" if @bathroom.stall_auto_close %>>
+    <!-- Input for stall_auto_close end -->
+    <label for="stall_auto_close" class="form-check-label">
+      Stall auto close
+    </label>
+  </div>
+
+  <!-- Label and input for stall_interior_handle start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="stall_interior_handle">
+    <!-- Input for stall_interior_handle start -->
+    <input id="stall_interior_handle" class="form-check-input" name="stall_interior_handle" type="checkbox" value="1" <%= "checked" if @bathroom.stall_interior_handle %>>
+    <!-- Input for stall_interior_handle end -->
+    <label for="stall_interior_handle" class="form-check-label">
+      Stall interior handle
+    </label>
+  </div>
+
+  <!-- Label and input for toilet_space start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="toilet_space">
+    <!-- Input for toilet_space start -->
+    <input id="toilet_space" class="form-check-input" name="toilet_space" type="checkbox" value="1" <%= "checked" if @bathroom.toilet_space %>>
+    <!-- Input for toilet_space end -->
+    <label for="toilet_space" class="form-check-label">
+      Toilet space
+    </label>
+  </div>
+
+  <!-- Label and input for grab_bars start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="grab_bars">
+    <!-- Input for grab_bars start -->
+    <input id="grab_bars" class="form-check-input" name="grab_bars" type="checkbox" value="1" <%= "checked" if @bathroom.grab_bars %>>
+    <!-- Input for grab_bars end -->
+    <label for="grab_bars" class="form-check-label">
+      Grab bars
+    </label>
+  </div>
+
+  <!-- Label and input for toilet_paper_reach start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="toilet_paper_reach">
+    <!-- Input for toilet_paper_reach start -->
+    <input id="toilet_paper_reach" class="form-check-input" name="toilet_paper_reach" type="checkbox" value="1" <%= "checked" if @bathroom.toilet_paper_reach %>>
+    <!-- Input for toilet_paper_reach end -->
+    <label for="toilet_paper_reach" class="form-check-label">
+      Toilet paper reach
+    </label>
+  </div>
+
+  <!-- Label and input for toilet_paper_height start -->
+  <div class="form-group">
+    <label for="toilet_paper_height">
+      Toilet paper height
+    </label>
+
+    <!-- Input for toilet_paper_height start -->
+    <input type="text" id="toilet_paper_height" name="toilet_paper_height" class="form-control" value="<%= @bathroom.toilet_paper_height %>">
+    <!-- Input for toilet_paper_height end -->
+  </div>
+  <!-- Label and input for toilet_paper_height end -->
+
+  <!-- Label and input for flush_button_type start -->
+  <div class="form-group">
+    <label for="flush_button_type">
+      Flush button type
+    </label>
+
+    <!-- Input for flush_button_type start -->
+    <input type="text" id="flush_button_type" name="flush_button_type" class="form-control" value="<%= @bathroom.flush_button_type %>">
+    <!-- Input for flush_button_type end -->
+  </div>
+  <!-- Label and input for flush_button_type end -->
+
+  <!-- Label and input for toilet_seat_height start -->
+  <div class="form-group">
+    <label for="toilet_seat_height">
+      Toilet seat height
+    </label>
+
+    <!-- Input for toilet_seat_height start -->
+    <input type="text" id="toilet_seat_height" name="toilet_seat_height" class="form-control" value="<%= @bathroom.toilet_seat_height %>">
+    <!-- Input for toilet_seat_height end -->
+  </div>
+  <!-- Label and input for toilet_seat_height end -->
+
+  <!-- Label and input for seat_cover_height start -->
+  <div class="form-group">
+    <label for="seat_cover_height">
+      Seat cover height
+    </label>
+
+    <!-- Input for seat_cover_height start -->
+    <input type="text" id="seat_cover_height" name="seat_cover_height" class="form-control" value="<%= @bathroom.seat_cover_height %>">
+    <!-- Input for seat_cover_height end -->
+  </div>
+  <!-- Label and input for seat_cover_height end -->
+
+  <!-- Label and input for urinal_height start -->
+  <div class="form-group">
+    <label for="urinal_height">
+      Urinal height
+    </label>
+
+    <!-- Input for urinal_height start -->
+    <input type="text" id="urinal_height" name="urinal_height" class="form-control" value="<%= @bathroom.urinal_height %>">
+    <!-- Input for urinal_height end -->
+  </div>
+  <!-- Label and input for urinal_height end -->
+
+  <!-- Label and input for number_accessible_stalls start -->
+  <div class="form-group">
+    <label for="number_accessible_stalls">
+      Number accessible stalls
+    </label>
+
+    <!-- Input for number_accessible_stalls start -->
+    <input type="text" id="number_accessible_stalls" name="number_accessible_stalls" class="form-control" value="<%= @bathroom.number_accessible_stalls %>">
+    <!-- Input for number_accessible_stalls end -->
+  </div>
+  <!-- Label and input for number_accessible_stalls end -->
+
+  <!-- Label and input for roll_under_sink start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="roll_under_sink">
+    <!-- Input for roll_under_sink start -->
+    <input id="roll_under_sink" class="form-check-input" name="roll_under_sink" type="checkbox" value="1" <%= "checked" if @bathroom.roll_under_sink %>>
+    <!-- Input for roll_under_sink end -->
+    <label for="roll_under_sink" class="form-check-label">
+      Roll under sink
+    </label>
+  </div>
+
+  <!-- Label and input for sink_height start -->
+  <div class="form-group">
+    <label for="sink_height">
+      Sink height
+    </label>
+
+    <!-- Input for sink_height start -->
+    <input type="text" id="sink_height" name="sink_height" class="form-control" value="<%= @bathroom.sink_height %>">
+    <!-- Input for sink_height end -->
+  </div>
+  <!-- Label and input for sink_height end -->
+
+  <!-- Label and input for hot_pipes_wrapped start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="hot_pipes_wrapped">
+    <!-- Input for hot_pipes_wrapped start -->
+    <input id="hot_pipes_wrapped" class="form-check-input" name="hot_pipes_wrapped" type="checkbox" value="1" <%= "checked" if @bathroom.hot_pipes_wrapped %>>
+    <!-- Input for hot_pipes_wrapped end -->
+    <label for="hot_pipes_wrapped" class="form-check-label">
+      Hot pipes wrapped
+    </label>
+  </div>
+
+  <!-- Label and input for faucet_type start -->
+  <div class="form-group">
+    <label for="faucet_type">
+      Faucet type
+    </label>
+
+    <!-- Input for faucet_type start -->
+    <input type="text" id="faucet_type" name="faucet_type" class="form-control" value="<%= @bathroom.faucet_type %>">
+    <!-- Input for faucet_type end -->
+  </div>
+  <!-- Label and input for faucet_type end -->
+
+  <!-- Label and input for soap_dispenser_height start -->
+  <div class="form-group">
+    <label for="soap_dispenser_height">
+      Soap dispenser height
+    </label>
+
+    <!-- Input for soap_dispenser_height start -->
+    <input type="text" id="soap_dispenser_height" name="soap_dispenser_height" class="form-control" value="<%= @bathroom.soap_dispenser_height %>">
+    <!-- Input for soap_dispenser_height end -->
+  </div>
+  <!-- Label and input for soap_dispenser_height end -->
+
+  <!-- Label and input for hand_dryer start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="hand_dryer">
+    <!-- Input for hand_dryer start -->
+    <input id="hand_dryer" class="form-check-input" name="hand_dryer" type="checkbox" value="1" <%= "checked" if @bathroom.hand_dryer %>>
+    <!-- Input for hand_dryer end -->
+    <label for="hand_dryer" class="form-check-label">
+      Hand dryer
+    </label>
+  </div>
+
+  <!-- Label and input for tampon_pad_dispenser start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="tampon_pad_dispenser">
+    <!-- Input for tampon_pad_dispenser start -->
+    <input id="tampon_pad_dispenser" class="form-check-input" name="tampon_pad_dispenser" type="checkbox" value="1" <%= "checked" if @bathroom.tampon_pad_dispenser %>>
+    <!-- Input for tampon_pad_dispenser end -->
+    <label for="tampon_pad_dispenser" class="form-check-label">
+      Tampon pad dispenser
+    </label>
+  </div>
+
+  <!-- Label and input for tp_dispenser_height start -->
+  <div class="form-group">
+    <label for="tp_dispenser_height">
+      Tp dispenser height
+    </label>
+
+    <!-- Input for tp_dispenser_height start -->
+    <input type="text" id="tp_dispenser_height" name="tp_dispenser_height" class="form-control" value="<%= @bathroom.tp_dispenser_height %>">
+    <!-- Input for tp_dispenser_height end -->
+  </div>
+  <!-- Label and input for tp_dispenser_height end -->
+
+  <!-- Label and input for mirror_height start -->
+  <div class="form-group">
+    <label for="mirror_height">
+      Mirror height
+    </label>
+
+    <!-- Input for mirror_height start -->
+    <input type="text" id="mirror_height" name="mirror_height" class="form-control" value="<%= @bathroom.mirror_height %>">
+    <!-- Input for mirror_height end -->
+  </div>
+  <!-- Label and input for mirror_height end -->
+
+  <!-- Label and input for alarm_system start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="alarm_system">
+    <!-- Input for alarm_system start -->
+    <input id="alarm_system" class="form-check-input" name="alarm_system" type="checkbox" value="1" <%= "checked" if @bathroom.alarm_system %>>
+    <!-- Input for alarm_system end -->
+    <label for="alarm_system" class="form-check-label">
+      Alarm system
+    </label>
+  </div>
+
+  <!-- Label and input for obstructions start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="obstructions">
+    <!-- Input for obstructions start -->
+    <input id="obstructions" class="form-check-input" name="obstructions" type="checkbox" value="1" <%= "checked" if @bathroom.obstructions %>>
+    <!-- Input for obstructions end -->
+    <label for="obstructions" class="form-check-label">
+      Obstructions
+    </label>
+  </div>
+
+  <!-- Label and input for stall_marked_accessible start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="stall_marked_accessible">
+    <!-- Input for stall_marked_accessible start -->
+    <input id="stall_marked_accessible" class="form-check-input" name="stall_marked_accessible" type="checkbox" value="1" <%= "checked" if @bathroom.stall_marked_accessible %>>
+    <!-- Input for stall_marked_accessible end -->
+    <label for="stall_marked_accessible" class="form-check-label">
+      Stall marked accessible
+    </label>
+  </div>
+
+  <!-- Label and input for door_marked_accessible start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="door_marked_accessible">
+    <!-- Input for door_marked_accessible start -->
+    <input id="door_marked_accessible" class="form-check-input" name="door_marked_accessible" type="checkbox" value="1" <%= "checked" if @bathroom.door_marked_accessible %>>
+    <!-- Input for door_marked_accessible end -->
+    <label for="door_marked_accessible" class="form-check-label">
+      Door marked accessible
+    </label>
+  </div>
+
+  <!-- Label and input for marked_unisex start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="marked_unisex">
+    <!-- Input for marked_unisex start -->
+    <input id="marked_unisex" class="form-check-input" name="marked_unisex" type="checkbox" value="1" <%= "checked" if @bathroom.marked_unisex %>>
+    <!-- Input for marked_unisex end -->
+    <label for="marked_unisex" class="form-check-label">
+      Marked unisex
+    </label>
+  </div>
+
+  <!-- Label and input for location_isolated start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="location_isolated">
+    <!-- Input for location_isolated start -->
+    <input id="location_isolated" class="form-check-input" name="location_isolated" type="checkbox" value="1" <%= "checked" if @bathroom.location_isolated %>>
+    <!-- Input for location_isolated end -->
+    <label for="location_isolated" class="form-check-label">
+      Location isolated
+    </label>
+  </div>
+
+  <!-- Label and input for next_door_bathrooms start -->
+  <div class="form-group">
+    <label for="next_door_bathrooms">
+      Next door bathrooms
+    </label>
+
+    <!-- Input for next_door_bathrooms start -->
+    <input type="text" id="next_door_bathrooms" name="next_door_bathrooms" class="form-control" value="<%= @bathroom.next_door_bathrooms %>">
+    <!-- Input for next_door_bathrooms end -->
+  </div>
+  <!-- Label and input for next_door_bathrooms end -->
+
+  <!-- Label and input for interior_lock start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="interior_lock">
+    <!-- Input for interior_lock start -->
+    <input id="interior_lock" class="form-check-input" name="interior_lock" type="checkbox" value="1" <%= "checked" if @bathroom.interior_lock %>>
+    <!-- Input for interior_lock end -->
+    <label for="interior_lock" class="form-check-label">
+      Interior lock
+    </label>
+  </div>
+
+  <!-- Label and input for dispenser_functional start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="dispenser_functional">
+    <!-- Input for dispenser_functional start -->
+    <input id="dispenser_functional" class="form-check-input" name="dispenser_functional" type="checkbox" value="1" <%= "checked" if @bathroom.dispenser_functional %>>
+    <!-- Input for dispenser_functional end -->
+    <label for="dispenser_functional" class="form-check-label">
+      Dispenser functional
+    </label>
+  </div>
+
+  <!-- Label and input for dispenser_cleanliness start -->
+  <div class="form-group">
+    <label for="dispenser_cleanliness">
+      Dispenser cleanliness
+    </label>
+
+    <!-- Input for dispenser_cleanliness start -->
+    <input type="text" id="dispenser_cleanliness" name="dispenser_cleanliness" class="form-control" value="<%= @bathroom.dispenser_cleanliness %>">
+    <!-- Input for dispenser_cleanliness end -->
+  </div>
+  <!-- Label and input for dispenser_cleanliness end -->
+
+  <!-- Label and input for changing_table start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="changing_table">
+    <!-- Input for changing_table start -->
+    <input id="changing_table" class="form-check-input" name="changing_table" type="checkbox" value="1" <%= "checked" if @bathroom.changing_table %>>
+    <!-- Input for changing_table end -->
+    <label for="changing_table" class="form-check-label">
+      Changing table
+    </label>
+  </div>
+
+  <!-- Label and input for changing_table_height start -->
+  <div class="form-group">
+    <label for="changing_table_height">
+      Changing table height
+    </label>
+
+    <!-- Input for changing_table_height start -->
+    <input type="text" id="changing_table_height" name="changing_table_height" class="form-control" value="<%= @bathroom.changing_table_height %>">
+    <!-- Input for changing_table_height end -->
+  </div>
+  <!-- Label and input for changing_table_height end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update bathroom
+  </button>
+</form>
+
+<hr>
+
+<a href="/bathrooms">
+  Go back
+</a>

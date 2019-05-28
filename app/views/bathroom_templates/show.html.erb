@@ -1,0 +1,451 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Bathroom #<%= @bathroom.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/bathrooms" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link bathroom start -->
+      <div class="col">
+        <a href="/bathrooms/<%= @bathroom.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit bathroom
+        </a>
+      </div>
+      <!-- Edit link bathroom end -->
+
+      <!-- Delete link bathroom start -->
+      <div class="col">
+        <a href="/delete_bathroom/<%= @bathroom.id %>" class="btn btn-block btn-outline-secondary">
+          Delete bathroom
+        </a>
+      </div>
+      <!-- Delete link bathroom end -->
+    </div>
+
+    <dl>
+      <dt>
+        Bathroom type
+      </dt>
+      <!-- Display bathroom_type start -->
+      <dd>
+        <%= @bathroom.bathroom_type %>
+      </dd>
+      <!-- Display bathroom_type end -->
+
+      <dt>
+        Outside access
+      </dt>
+      <!-- Display outside_access start -->
+      <dd>
+        <%= @bathroom.outside_access %>
+      </dd>
+      <!-- Display outside_access end -->
+
+      <dt>
+        Building
+      </dt>
+      <!-- Display building start -->
+      <dd>
+        <%= @bathroom.building %>
+      </dd>
+      <!-- Display building end -->
+
+      <dt>
+        Room number
+      </dt>
+      <!-- Display room_number start -->
+      <dd>
+        <%= @bathroom.room_number %>
+      </dd>
+      <!-- Display room_number end -->
+
+      <dt>
+        Latitude
+      </dt>
+      <!-- Display latitude start -->
+      <dd>
+        <%= @bathroom.latitude %>
+      </dd>
+      <!-- Display latitude end -->
+
+      <dt>
+        Longitude
+      </dt>
+      <!-- Display longitude start -->
+      <dd>
+        <%= @bathroom.longitude %>
+      </dd>
+      <!-- Display longitude end -->
+
+      <dt>
+        Door width
+      </dt>
+      <!-- Display door_width start -->
+      <dd>
+        <%= @bathroom.door_width %>
+      </dd>
+      <!-- Display door_width end -->
+
+      <dt>
+        Doorknob type
+      </dt>
+      <!-- Display doorknob_type start -->
+      <dd>
+        <%= @bathroom.doorknob_type %>
+      </dd>
+      <!-- Display doorknob_type end -->
+
+      <dt>
+        Auto push button
+      </dt>
+      <!-- Display auto_push_button start -->
+      <dd>
+        <%= @bathroom.auto_push_button %>
+      </dd>
+      <!-- Display auto_push_button end -->
+
+      <dt>
+        Double doors
+      </dt>
+      <!-- Display double_doors start -->
+      <dd>
+        <%= @bathroom.double_doors %>
+      </dd>
+      <!-- Display double_doors end -->
+
+      <dt>
+        Stall door width
+      </dt>
+      <!-- Display stall_door_width start -->
+      <dd>
+        <%= @bathroom.stall_door_width %>
+      </dd>
+      <!-- Display stall_door_width end -->
+
+      <dt>
+        Stall doorknob type
+      </dt>
+      <!-- Display stall_doorknob_type start -->
+      <dd>
+        <%= @bathroom.stall_doorknob_type %>
+      </dd>
+      <!-- Display stall_doorknob_type end -->
+
+      <dt>
+        Stall auto close
+      </dt>
+      <!-- Display stall_auto_close start -->
+      <dd>
+        <%= @bathroom.stall_auto_close %>
+      </dd>
+      <!-- Display stall_auto_close end -->
+
+      <dt>
+        Stall interior handle
+      </dt>
+      <!-- Display stall_interior_handle start -->
+      <dd>
+        <%= @bathroom.stall_interior_handle %>
+      </dd>
+      <!-- Display stall_interior_handle end -->
+
+      <dt>
+        Toilet space
+      </dt>
+      <!-- Display toilet_space start -->
+      <dd>
+        <%= @bathroom.toilet_space %>
+      </dd>
+      <!-- Display toilet_space end -->
+
+      <dt>
+        Grab bars
+      </dt>
+      <!-- Display grab_bars start -->
+      <dd>
+        <%= @bathroom.grab_bars %>
+      </dd>
+      <!-- Display grab_bars end -->
+
+      <dt>
+        Toilet paper reach
+      </dt>
+      <!-- Display toilet_paper_reach start -->
+      <dd>
+        <%= @bathroom.toilet_paper_reach %>
+      </dd>
+      <!-- Display toilet_paper_reach end -->
+
+      <dt>
+        Toilet paper height
+      </dt>
+      <!-- Display toilet_paper_height start -->
+      <dd>
+        <%= @bathroom.toilet_paper_height %>
+      </dd>
+      <!-- Display toilet_paper_height end -->
+
+      <dt>
+        Flush button type
+      </dt>
+      <!-- Display flush_button_type start -->
+      <dd>
+        <%= @bathroom.flush_button_type %>
+      </dd>
+      <!-- Display flush_button_type end -->
+
+      <dt>
+        Toilet seat height
+      </dt>
+      <!-- Display toilet_seat_height start -->
+      <dd>
+        <%= @bathroom.toilet_seat_height %>
+      </dd>
+      <!-- Display toilet_seat_height end -->
+
+      <dt>
+        Seat cover height
+      </dt>
+      <!-- Display seat_cover_height start -->
+      <dd>
+        <%= @bathroom.seat_cover_height %>
+      </dd>
+      <!-- Display seat_cover_height end -->
+
+      <dt>
+        Urinal height
+      </dt>
+      <!-- Display urinal_height start -->
+      <dd>
+        <%= @bathroom.urinal_height %>
+      </dd>
+      <!-- Display urinal_height end -->
+
+      <dt>
+        Number accessible stalls
+      </dt>
+      <!-- Display number_accessible_stalls start -->
+      <dd>
+        <%= @bathroom.number_accessible_stalls %>
+      </dd>
+      <!-- Display number_accessible_stalls end -->
+
+      <dt>
+        Roll under sink
+      </dt>
+      <!-- Display roll_under_sink start -->
+      <dd>
+        <%= @bathroom.roll_under_sink %>
+      </dd>
+      <!-- Display roll_under_sink end -->
+
+      <dt>
+        Sink height
+      </dt>
+      <!-- Display sink_height start -->
+      <dd>
+        <%= @bathroom.sink_height %>
+      </dd>
+      <!-- Display sink_height end -->
+
+      <dt>
+        Hot pipes wrapped
+      </dt>
+      <!-- Display hot_pipes_wrapped start -->
+      <dd>
+        <%= @bathroom.hot_pipes_wrapped %>
+      </dd>
+      <!-- Display hot_pipes_wrapped end -->
+
+      <dt>
+        Faucet type
+      </dt>
+      <!-- Display faucet_type start -->
+      <dd>
+        <%= @bathroom.faucet_type %>
+      </dd>
+      <!-- Display faucet_type end -->
+
+      <dt>
+        Soap dispenser height
+      </dt>
+      <!-- Display soap_dispenser_height start -->
+      <dd>
+        <%= @bathroom.soap_dispenser_height %>
+      </dd>
+      <!-- Display soap_dispenser_height end -->
+
+      <dt>
+        Hand dryer
+      </dt>
+      <!-- Display hand_dryer start -->
+      <dd>
+        <%= @bathroom.hand_dryer %>
+      </dd>
+      <!-- Display hand_dryer end -->
+
+      <dt>
+        Tampon pad dispenser
+      </dt>
+      <!-- Display tampon_pad_dispenser start -->
+      <dd>
+        <%= @bathroom.tampon_pad_dispenser %>
+      </dd>
+      <!-- Display tampon_pad_dispenser end -->
+
+      <dt>
+        Tp dispenser height
+      </dt>
+      <!-- Display tp_dispenser_height start -->
+      <dd>
+        <%= @bathroom.tp_dispenser_height %>
+      </dd>
+      <!-- Display tp_dispenser_height end -->
+
+      <dt>
+        Mirror height
+      </dt>
+      <!-- Display mirror_height start -->
+      <dd>
+        <%= @bathroom.mirror_height %>
+      </dd>
+      <!-- Display mirror_height end -->
+
+      <dt>
+        Alarm system
+      </dt>
+      <!-- Display alarm_system start -->
+      <dd>
+        <%= @bathroom.alarm_system %>
+      </dd>
+      <!-- Display alarm_system end -->
+
+      <dt>
+        Obstructions
+      </dt>
+      <!-- Display obstructions start -->
+      <dd>
+        <%= @bathroom.obstructions %>
+      </dd>
+      <!-- Display obstructions end -->
+
+      <dt>
+        Stall marked accessible
+      </dt>
+      <!-- Display stall_marked_accessible start -->
+      <dd>
+        <%= @bathroom.stall_marked_accessible %>
+      </dd>
+      <!-- Display stall_marked_accessible end -->
+
+      <dt>
+        Door marked accessible
+      </dt>
+      <!-- Display door_marked_accessible start -->
+      <dd>
+        <%= @bathroom.door_marked_accessible %>
+      </dd>
+      <!-- Display door_marked_accessible end -->
+
+      <dt>
+        Marked unisex
+      </dt>
+      <!-- Display marked_unisex start -->
+      <dd>
+        <%= @bathroom.marked_unisex %>
+      </dd>
+      <!-- Display marked_unisex end -->
+
+      <dt>
+        Location isolated
+      </dt>
+      <!-- Display location_isolated start -->
+      <dd>
+        <%= @bathroom.location_isolated %>
+      </dd>
+      <!-- Display location_isolated end -->
+
+      <dt>
+        Next door bathrooms
+      </dt>
+      <!-- Display next_door_bathrooms start -->
+      <dd>
+        <%= @bathroom.next_door_bathrooms %>
+      </dd>
+      <!-- Display next_door_bathrooms end -->
+
+      <dt>
+        Interior lock
+      </dt>
+      <!-- Display interior_lock start -->
+      <dd>
+        <%= @bathroom.interior_lock %>
+      </dd>
+      <!-- Display interior_lock end -->
+
+      <dt>
+        Dispenser functional
+      </dt>
+      <!-- Display dispenser_functional start -->
+      <dd>
+        <%= @bathroom.dispenser_functional %>
+      </dd>
+      <!-- Display dispenser_functional end -->
+
+      <dt>
+        Dispenser cleanliness
+      </dt>
+      <!-- Display dispenser_cleanliness start -->
+      <dd>
+        <%= @bathroom.dispenser_cleanliness %>
+      </dd>
+      <!-- Display dispenser_cleanliness end -->
+
+      <dt>
+        Changing table
+      </dt>
+      <!-- Display changing_table start -->
+      <dd>
+        <%= @bathroom.changing_table %>
+      </dd>
+      <!-- Display changing_table end -->
+
+      <dt>
+        Changing table height
+      </dt>
+      <!-- Display changing_table_height start -->
+      <dd>
+        <%= @bathroom.changing_table_height %>
+      </dd>
+      <!-- Display changing_table_height end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@bathroom.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@bathroom.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
