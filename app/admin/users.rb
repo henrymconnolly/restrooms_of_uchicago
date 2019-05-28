@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+
+ permit_params :email, :password, :username, :preference_1, :preference_2, :preference_3, :preference_4, :preference_5
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
