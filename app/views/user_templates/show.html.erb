@@ -1,0 +1,120 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      User #<%= @user.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/users" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link user start -->
+      <div class="col">
+        <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit user
+        </a>
+      </div>
+      <!-- Edit link user end -->
+
+    </div>
+
+    <dl>
+      <dt>
+        Email
+      </dt>
+      <!-- Display email start -->
+      <dd>
+        <%= @user.email %>
+      </dd>
+      <!-- Display email end -->
+
+      <dt>
+        Password
+      </dt>
+      <!-- Display password start -->
+      <dd>
+        <%= @user.password %>
+      </dd>
+      <!-- Display password end -->
+
+      <dt>
+        Username
+      </dt>
+      <!-- Display username start -->
+      <dd>
+        <%= @user.username %>
+      </dd>
+      <!-- Display username end -->
+
+      <dt>
+        Preference 1
+      </dt>
+      <!-- Display preference_1 start -->
+      <dd>
+        <%= @user.preference_1 %>
+      </dd>
+      <!-- Display preference_1 end -->
+
+      <dt>
+        Preference 2
+      </dt>
+      <!-- Display preference_2 start -->
+      <dd>
+        <%= @user.preference_2 %>
+      </dd>
+      <!-- Display preference_2 end -->
+
+      <dt>
+        Preference 3
+      </dt>
+      <!-- Display preference_3 start -->
+      <dd>
+        <%= @user.preference_3 %>
+      </dd>
+      <!-- Display preference_3 end -->
+
+      <dt>
+        Preference 4
+      </dt>
+      <!-- Display preference_4 start -->
+      <dd>
+        <%= @user.preference_4 %>
+      </dd>
+      <!-- Display preference_4 end -->
+
+      <dt>
+        Preference 5
+      </dt>
+      <!-- Display preference_5 start -->
+      <dd>
+        <%= @user.preference_5 %>
+      </dd>
+      <!-- Display preference_5 end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@user.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@user.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
