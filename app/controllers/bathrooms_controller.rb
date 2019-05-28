@@ -1,6 +1,7 @@
 class BathroomsController < ApplicationController
   def index
-    @bathrooms = Bathroom.page(params[:page]).per(10)
+    @q = Bathroom.ransack(params[:q])
+    @bathrooms = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("bathroom_templates/index.html.erb")
   end

@@ -1,0 +1,590 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "bathrooms_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :changing_table_height, "Changing table height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :changing_table_height_gteq, :class => "form-control", :placeholder => "Changing table height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :changing_table_height_lteq, :class => "form-control", :placeholder => "Changing table height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :changing_table_eq, "Changing table" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :changing_table_eq, "1", checked: ((params[:q] && params[:q][:changing_table_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :changing_table_eq, "0", checked: ((params[:q] && params[:q][:changing_table_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :changing_table_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dispenser_cleanliness_cont, "Dispenser cleanliness contains" %>
+    <%= f.text_field :dispenser_cleanliness_cont, :class => "form-control", :placeholder => "Dispenser cleanliness contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dispenser_functional_eq, "Dispenser functional" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :dispenser_functional_eq, "1", checked: ((params[:q] && params[:q][:dispenser_functional_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :dispenser_functional_eq, "0", checked: ((params[:q] && params[:q][:dispenser_functional_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :dispenser_functional_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :interior_lock_eq, "Interior lock" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :interior_lock_eq, "1", checked: ((params[:q] && params[:q][:interior_lock_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :interior_lock_eq, "0", checked: ((params[:q] && params[:q][:interior_lock_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :interior_lock_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :next_door_bathrooms_cont, "Next door bathrooms contains" %>
+    <%= f.text_field :next_door_bathrooms_cont, :class => "form-control", :placeholder => "Next door bathrooms contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location_isolated_eq, "Location isolated" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :location_isolated_eq, "1", checked: ((params[:q] && params[:q][:location_isolated_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :location_isolated_eq, "0", checked: ((params[:q] && params[:q][:location_isolated_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :location_isolated_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :marked_unisex_eq, "Marked unisex" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :marked_unisex_eq, "1", checked: ((params[:q] && params[:q][:marked_unisex_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :marked_unisex_eq, "0", checked: ((params[:q] && params[:q][:marked_unisex_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :marked_unisex_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :door_marked_accessible_eq, "Door marked accessible" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :door_marked_accessible_eq, "1", checked: ((params[:q] && params[:q][:door_marked_accessible_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :door_marked_accessible_eq, "0", checked: ((params[:q] && params[:q][:door_marked_accessible_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :door_marked_accessible_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stall_marked_accessible_eq, "Stall marked accessible" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_marked_accessible_eq, "1", checked: ((params[:q] && params[:q][:stall_marked_accessible_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_marked_accessible_eq, "0", checked: ((params[:q] && params[:q][:stall_marked_accessible_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_marked_accessible_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :obstructions_eq, "Obstructions" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :obstructions_eq, "1", checked: ((params[:q] && params[:q][:obstructions_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :obstructions_eq, "0", checked: ((params[:q] && params[:q][:obstructions_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :obstructions_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :alarm_system_eq, "Alarm system" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :alarm_system_eq, "1", checked: ((params[:q] && params[:q][:alarm_system_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :alarm_system_eq, "0", checked: ((params[:q] && params[:q][:alarm_system_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :alarm_system_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :mirror_height, "Mirror height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :mirror_height_gteq, :class => "form-control", :placeholder => "Mirror height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :mirror_height_lteq, :class => "form-control", :placeholder => "Mirror height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tp_dispenser_height, "Tp dispenser height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :tp_dispenser_height_gteq, :class => "form-control", :placeholder => "Tp dispenser height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :tp_dispenser_height_lteq, :class => "form-control", :placeholder => "Tp dispenser height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tampon_pad_dispenser_eq, "Tampon pad dispenser" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :tampon_pad_dispenser_eq, "1", checked: ((params[:q] && params[:q][:tampon_pad_dispenser_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :tampon_pad_dispenser_eq, "0", checked: ((params[:q] && params[:q][:tampon_pad_dispenser_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :tampon_pad_dispenser_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :hand_dryer_eq, "Hand dryer" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :hand_dryer_eq, "1", checked: ((params[:q] && params[:q][:hand_dryer_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :hand_dryer_eq, "0", checked: ((params[:q] && params[:q][:hand_dryer_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :hand_dryer_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :soap_dispenser_height, "Soap dispenser height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :soap_dispenser_height_gteq, :class => "form-control", :placeholder => "Soap dispenser height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :soap_dispenser_height_lteq, :class => "form-control", :placeholder => "Soap dispenser height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :faucet_type_cont, "Faucet type contains" %>
+    <%= f.text_field :faucet_type_cont, :class => "form-control", :placeholder => "Faucet type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :hot_pipes_wrapped_eq, "Hot pipes wrapped" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :hot_pipes_wrapped_eq, "1", checked: ((params[:q] && params[:q][:hot_pipes_wrapped_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :hot_pipes_wrapped_eq, "0", checked: ((params[:q] && params[:q][:hot_pipes_wrapped_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :hot_pipes_wrapped_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sink_height, "Sink height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :sink_height_gteq, :class => "form-control", :placeholder => "Sink height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :sink_height_lteq, :class => "form-control", :placeholder => "Sink height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :roll_under_sink_eq, "Roll under sink" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :roll_under_sink_eq, "1", checked: ((params[:q] && params[:q][:roll_under_sink_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :roll_under_sink_eq, "0", checked: ((params[:q] && params[:q][:roll_under_sink_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :roll_under_sink_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :number_accessible_stalls, "Number accessible stalls" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :number_accessible_stalls_gteq, :class => "form-control", :placeholder => "Number accessible stalls greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :number_accessible_stalls_lteq, :class => "form-control", :placeholder => "Number accessible stalls less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :urinal_height, "Urinal height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :urinal_height_gteq, :class => "form-control", :placeholder => "Urinal height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :urinal_height_lteq, :class => "form-control", :placeholder => "Urinal height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :seat_cover_height, "Seat cover height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :seat_cover_height_gteq, :class => "form-control", :placeholder => "Seat cover height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :seat_cover_height_lteq, :class => "form-control", :placeholder => "Seat cover height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :toilet_seat_height, "Toilet seat height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :toilet_seat_height_gteq, :class => "form-control", :placeholder => "Toilet seat height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :toilet_seat_height_lteq, :class => "form-control", :placeholder => "Toilet seat height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :flush_button_type_cont, "Flush button type contains" %>
+    <%= f.text_field :flush_button_type_cont, :class => "form-control", :placeholder => "Flush button type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :toilet_paper_height, "Toilet paper height" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :toilet_paper_height_gteq, :class => "form-control", :placeholder => "Toilet paper height greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :toilet_paper_height_lteq, :class => "form-control", :placeholder => "Toilet paper height less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :toilet_paper_reach_eq, "Toilet paper reach" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_paper_reach_eq, "1", checked: ((params[:q] && params[:q][:toilet_paper_reach_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_paper_reach_eq, "0", checked: ((params[:q] && params[:q][:toilet_paper_reach_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_paper_reach_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :grab_bars_eq, "Grab bars" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :grab_bars_eq, "1", checked: ((params[:q] && params[:q][:grab_bars_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :grab_bars_eq, "0", checked: ((params[:q] && params[:q][:grab_bars_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :grab_bars_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :toilet_space_eq, "Toilet space" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_space_eq, "1", checked: ((params[:q] && params[:q][:toilet_space_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_space_eq, "0", checked: ((params[:q] && params[:q][:toilet_space_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :toilet_space_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stall_interior_handle_eq, "Stall interior handle" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_interior_handle_eq, "1", checked: ((params[:q] && params[:q][:stall_interior_handle_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_interior_handle_eq, "0", checked: ((params[:q] && params[:q][:stall_interior_handle_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_interior_handle_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stall_auto_close_eq, "Stall auto close" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_auto_close_eq, "1", checked: ((params[:q] && params[:q][:stall_auto_close_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_auto_close_eq, "0", checked: ((params[:q] && params[:q][:stall_auto_close_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :stall_auto_close_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stall_doorknob_type_cont, "Stall doorknob type contains" %>
+    <%= f.text_field :stall_doorknob_type_cont, :class => "form-control", :placeholder => "Stall doorknob type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stall_door_width, "Stall door width" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :stall_door_width_gteq, :class => "form-control", :placeholder => "Stall door width greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :stall_door_width_lteq, :class => "form-control", :placeholder => "Stall door width less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :double_doors_eq, "Double doors" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :double_doors_eq, "1", checked: ((params[:q] && params[:q][:double_doors_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :double_doors_eq, "0", checked: ((params[:q] && params[:q][:double_doors_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :double_doors_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :auto_push_button_eq, "Auto push button" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :auto_push_button_eq, "1", checked: ((params[:q] && params[:q][:auto_push_button_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :auto_push_button_eq, "0", checked: ((params[:q] && params[:q][:auto_push_button_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :auto_push_button_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :doorknob_type_cont, "Doorknob type contains" %>
+    <%= f.text_field :doorknob_type_cont, :class => "form-control", :placeholder => "Doorknob type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :door_width, "Door width" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :door_width_gteq, :class => "form-control", :placeholder => "Door width greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :door_width_lteq, :class => "form-control", :placeholder => "Door width less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :longitude, "Longitude" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :longitude_gteq, :class => "form-control", :placeholder => "Longitude greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :longitude_lteq, :class => "form-control", :placeholder => "Longitude less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :latitude, "Latitude" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :latitude_gteq, :class => "form-control", :placeholder => "Latitude greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :latitude_lteq, :class => "form-control", :placeholder => "Latitude less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :room_number, "Room number" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :room_number_gteq, :class => "form-control", :placeholder => "Room number greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :room_number_lteq, :class => "form-control", :placeholder => "Room number less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :building_cont, "Building contains" %>
+    <%= f.text_field :building_cont, :class => "form-control", :placeholder => "Building contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :outside_access_eq, "Outside access" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :outside_access_eq, "1", checked: ((params[:q] && params[:q][:outside_access_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :outside_access_eq, "0", checked: ((params[:q] && params[:q][:outside_access_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :outside_access_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bathroom_type_cont, "Bathroom type contains" %>
+    <%= f.text_field :bathroom_type_cont, :class => "form-control", :placeholder => "Bathroom type contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/bathrooms" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#bathrooms_filters">
+  Show filters
+</a>
