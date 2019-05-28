@@ -7,9 +7,7 @@
 
       <div class="card-body">
         <% was_validated = resource.errors.any? %>
-        <!-- Form html options start -->
         <% form_html_options = { novalidate: true, class: "mb-3" } %>
-        <!-- Form html options end -->
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: form_html_options) do |f| %>
 
           <div class="form-group">
@@ -91,7 +89,6 @@
           </div>
 
           
-          <!-- Devise Input for username start -->
           <div class="form-group">
             <% username_was_invalid = resource.errors.include?(:username) %>
 
@@ -117,9 +114,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for username end -->
           
-          <!-- Devise Input for preference_1 start -->
           <div class="form-group">
             <% preference_1_was_invalid = resource.errors.include?(:preference_1) %>
 
@@ -145,9 +140,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for preference_1 end -->
           
-          <!-- Devise Input for preference_2 start -->
           <div class="form-group">
             <% preference_2_was_invalid = resource.errors.include?(:preference_2) %>
 
@@ -173,9 +166,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for preference_2 end -->
           
-          <!-- Devise Input for preference_3 start -->
           <div class="form-group">
             <% preference_3_was_invalid = resource.errors.include?(:preference_3) %>
 
@@ -201,9 +192,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for preference_3 end -->
           
-          <!-- Devise Input for preference_4 start -->
           <div class="form-group">
             <% preference_4_was_invalid = resource.errors.include?(:preference_4) %>
 
@@ -229,9 +218,7 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for preference_4 end -->
           
-          <!-- Devise Input for preference_5 start -->
           <div class="form-group">
             <% preference_5_was_invalid = resource.errors.include?(:preference_5) %>
 
@@ -257,7 +244,6 @@
               <% end %>
             <% end %>
           </div>
-          <!-- Devise Input for preference_5 end -->
           <%= f.button class: "btn btn-outline-primary btn-block" %>
 
           <hr>

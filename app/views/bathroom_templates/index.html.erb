@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "bathroom_templates/bathrooms_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -222,287 +218,193 @@
 
       <% @bathrooms.each do |bathroom| %>
       <tr>
-        <!-- Display bathroom.id start -->
         <td>
           <%= bathroom.id %>
         </td>
-        <!-- Display bathroom.id end -->
 
-        <!-- Display bathroom.bathroom_type start -->
         <td>
           <%= bathroom.bathroom_type %>
         </td>
-        <!-- Display bathroom.bathroom_type end -->
 
-        <!-- Display bathroom.outside_access start -->
         <td>
           <%= bathroom.outside_access %>
         </td>
-        <!-- Display bathroom.outside_access end -->
 
-        <!-- Display bathroom.building start -->
         <td>
           <%= bathroom.building %>
         </td>
-        <!-- Display bathroom.building end -->
 
-        <!-- Display bathroom.room_number start -->
         <td>
           <%= bathroom.room_number %>
         </td>
-        <!-- Display bathroom.room_number end -->
 
-        <!-- Display bathroom.latitude start -->
         <td>
           <%= bathroom.latitude %>
         </td>
-        <!-- Display bathroom.latitude end -->
 
-        <!-- Display bathroom.longitude start -->
         <td>
           <%= bathroom.longitude %>
         </td>
-        <!-- Display bathroom.longitude end -->
 
-        <!-- Display bathroom.door_width start -->
         <td>
           <%= bathroom.door_width %>
         </td>
-        <!-- Display bathroom.door_width end -->
 
-        <!-- Display bathroom.doorknob_type start -->
         <td>
           <%= bathroom.doorknob_type %>
         </td>
-        <!-- Display bathroom.doorknob_type end -->
 
-        <!-- Display bathroom.auto_push_button start -->
         <td>
           <%= bathroom.auto_push_button %>
         </td>
-        <!-- Display bathroom.auto_push_button end -->
 
-        <!-- Display bathroom.double_doors start -->
         <td>
           <%= bathroom.double_doors %>
         </td>
-        <!-- Display bathroom.double_doors end -->
 
-        <!-- Display bathroom.stall_door_width start -->
         <td>
           <%= bathroom.stall_door_width %>
         </td>
-        <!-- Display bathroom.stall_door_width end -->
 
-        <!-- Display bathroom.stall_doorknob_type start -->
         <td>
           <%= bathroom.stall_doorknob_type %>
         </td>
-        <!-- Display bathroom.stall_doorknob_type end -->
 
-        <!-- Display bathroom.stall_auto_close start -->
         <td>
           <%= bathroom.stall_auto_close %>
         </td>
-        <!-- Display bathroom.stall_auto_close end -->
 
-        <!-- Display bathroom.stall_interior_handle start -->
         <td>
           <%= bathroom.stall_interior_handle %>
         </td>
-        <!-- Display bathroom.stall_interior_handle end -->
 
-        <!-- Display bathroom.toilet_space start -->
         <td>
           <%= bathroom.toilet_space %>
         </td>
-        <!-- Display bathroom.toilet_space end -->
 
-        <!-- Display bathroom.grab_bars start -->
         <td>
           <%= bathroom.grab_bars %>
         </td>
-        <!-- Display bathroom.grab_bars end -->
 
-        <!-- Display bathroom.toilet_paper_reach start -->
         <td>
           <%= bathroom.toilet_paper_reach %>
         </td>
-        <!-- Display bathroom.toilet_paper_reach end -->
 
-        <!-- Display bathroom.toilet_paper_height start -->
         <td>
           <%= bathroom.toilet_paper_height %>
         </td>
-        <!-- Display bathroom.toilet_paper_height end -->
 
-        <!-- Display bathroom.flush_button_type start -->
         <td>
           <%= bathroom.flush_button_type %>
         </td>
-        <!-- Display bathroom.flush_button_type end -->
 
-        <!-- Display bathroom.toilet_seat_height start -->
         <td>
           <%= bathroom.toilet_seat_height %>
         </td>
-        <!-- Display bathroom.toilet_seat_height end -->
 
-        <!-- Display bathroom.seat_cover_height start -->
         <td>
           <%= bathroom.seat_cover_height %>
         </td>
-        <!-- Display bathroom.seat_cover_height end -->
 
-        <!-- Display bathroom.urinal_height start -->
         <td>
           <%= bathroom.urinal_height %>
         </td>
-        <!-- Display bathroom.urinal_height end -->
 
-        <!-- Display bathroom.number_accessible_stalls start -->
         <td>
           <%= bathroom.number_accessible_stalls %>
         </td>
-        <!-- Display bathroom.number_accessible_stalls end -->
 
-        <!-- Display bathroom.roll_under_sink start -->
         <td>
           <%= bathroom.roll_under_sink %>
         </td>
-        <!-- Display bathroom.roll_under_sink end -->
 
-        <!-- Display bathroom.sink_height start -->
         <td>
           <%= bathroom.sink_height %>
         </td>
-        <!-- Display bathroom.sink_height end -->
 
-        <!-- Display bathroom.hot_pipes_wrapped start -->
         <td>
           <%= bathroom.hot_pipes_wrapped %>
         </td>
-        <!-- Display bathroom.hot_pipes_wrapped end -->
 
-        <!-- Display bathroom.faucet_type start -->
         <td>
           <%= bathroom.faucet_type %>
         </td>
-        <!-- Display bathroom.faucet_type end -->
 
-        <!-- Display bathroom.soap_dispenser_height start -->
         <td>
           <%= bathroom.soap_dispenser_height %>
         </td>
-        <!-- Display bathroom.soap_dispenser_height end -->
 
-        <!-- Display bathroom.hand_dryer start -->
         <td>
           <%= bathroom.hand_dryer %>
         </td>
-        <!-- Display bathroom.hand_dryer end -->
 
-        <!-- Display bathroom.tampon_pad_dispenser start -->
         <td>
           <%= bathroom.tampon_pad_dispenser %>
         </td>
-        <!-- Display bathroom.tampon_pad_dispenser end -->
 
-        <!-- Display bathroom.tp_dispenser_height start -->
         <td>
           <%= bathroom.tp_dispenser_height %>
         </td>
-        <!-- Display bathroom.tp_dispenser_height end -->
 
-        <!-- Display bathroom.mirror_height start -->
         <td>
           <%= bathroom.mirror_height %>
         </td>
-        <!-- Display bathroom.mirror_height end -->
 
-        <!-- Display bathroom.alarm_system start -->
         <td>
           <%= bathroom.alarm_system %>
         </td>
-        <!-- Display bathroom.alarm_system end -->
 
-        <!-- Display bathroom.obstructions start -->
         <td>
           <%= bathroom.obstructions %>
         </td>
-        <!-- Display bathroom.obstructions end -->
 
-        <!-- Display bathroom.stall_marked_accessible start -->
         <td>
           <%= bathroom.stall_marked_accessible %>
         </td>
-        <!-- Display bathroom.stall_marked_accessible end -->
 
-        <!-- Display bathroom.door_marked_accessible start -->
         <td>
           <%= bathroom.door_marked_accessible %>
         </td>
-        <!-- Display bathroom.door_marked_accessible end -->
 
-        <!-- Display bathroom.marked_unisex start -->
         <td>
           <%= bathroom.marked_unisex %>
         </td>
-        <!-- Display bathroom.marked_unisex end -->
 
-        <!-- Display bathroom.location_isolated start -->
         <td>
           <%= bathroom.location_isolated %>
         </td>
-        <!-- Display bathroom.location_isolated end -->
 
-        <!-- Display bathroom.next_door_bathrooms start -->
         <td>
           <%= bathroom.next_door_bathrooms %>
         </td>
-        <!-- Display bathroom.next_door_bathrooms end -->
 
-        <!-- Display bathroom.interior_lock start -->
         <td>
           <%= bathroom.interior_lock %>
         </td>
-        <!-- Display bathroom.interior_lock end -->
 
-        <!-- Display bathroom.dispenser_functional start -->
         <td>
           <%= bathroom.dispenser_functional %>
         </td>
-        <!-- Display bathroom.dispenser_functional end -->
 
-        <!-- Display bathroom.dispenser_cleanliness start -->
         <td>
           <%= bathroom.dispenser_cleanliness %>
         </td>
-        <!-- Display bathroom.dispenser_cleanliness end -->
 
-        <!-- Display bathroom.changing_table start -->
         <td>
           <%= bathroom.changing_table %>
         </td>
-        <!-- Display bathroom.changing_table end -->
 
-        <!-- Display bathroom.changing_table_height start -->
         <td>
           <%= bathroom.changing_table_height %>
         </td>
-        <!-- Display bathroom.changing_table_height end -->
 
-        <!-- Display bathroom.created_at start -->
         <td>
           <%= time_ago_in_words(bathroom.created_at) %> ago
         </td>
-        <!-- Display bathroom.created_at end -->
 
-        <!-- Display bathroom.updated_at start -->
         <td>
           <%= time_ago_in_words(bathroom.updated_at) %> ago
         </td>
-        <!-- Display bathroom.updated_at end -->
 
         <td>
           <a href="/bathrooms/<%= bathroom.id %>">
